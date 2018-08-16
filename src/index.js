@@ -6,12 +6,10 @@ class Counter extends React.Component {
     count: 0
   };
   addOne = () => {
-    const nextState = this.state.count + 1;
-    this.setState(() => ({ count: nextState }));
+    this.setState(prevState => ({ count: prevState.count + 1 }));
   };
   removeOne = () => {
-    const nextState = this.state.count - 1;
-    this.setState(() => ({ count: nextState }));
+    this.setState(prevState => ({ count: prevState.count - 1 }));
   };
   resetCount = () => {
     this.setState(() => ({ count: 0 }));
